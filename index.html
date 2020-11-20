@@ -14,7 +14,31 @@
     <script src="gesture-handler.js"></script>
   </head>
 
+  <style>
+    .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+    }
+</style>
+  
   <body>
+    <div class="arjs-loader">
+        <div>Loading, please wait...</div>
+    </div>    
     <a-scene
       arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
       embedded
@@ -23,6 +47,11 @@
       gesture-detector
       id="scene"
     >
+      
+  <a-assets>
+    <img preload="auto" id="my-image" src="./assets/Elisabeth_Auguste_nft.jpg">
+  </a-assets>      
+      
       <a-nft
         type="nft"
         url="https://zenturio.github.io/image-tracking/assets/nft/29_LouisPigage_nft"
@@ -36,7 +65,7 @@
       >
 
 
-<a-image src="./assets/Elisabeth_Auguste_nft.jpg" width="1190" height="1190" gesture-handler></a-image>
+<a-image src="#my-image" width="1190" height="1190" gesture-handler></a-image>
 
 
 
