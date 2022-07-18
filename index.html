@@ -64,9 +64,14 @@
     <img preload="auto" id="my-image" src="./assets/Elisabeth_Auguste_nft.jpg">
   </a-assets>   
 
-<a-image src="#my-image" width="1190" height="1190" rotation="270 90 270" position='0 200 0' gesture-handler></a-image>
+<!--<a-image src="#my-image" width="1190" height="1190" rotation="270 90 270" position='0 200 0' gesture-handler></a-image>-->
 
-
+<a-scene>
+ <a-assets>
+  <video id="cityVideo" src="https://cdn.aframe.io/360-video-boilerplate/video/city.mp4">
+ </a-assets>
+ <a-videopshere src="#cityVideo"></a-videosphere>
+</a-scene>
 
 <!--        <a-entity
           gltf-model="./assets/magnemite/scene.gltf"
